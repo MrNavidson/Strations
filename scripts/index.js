@@ -18,6 +18,7 @@ var COLOR_YELLOW = "#ffff00";
 var COLOR_BLUE = "#00eeee";
 var COLOR_BLACK = "#808080";
 var COLOR_GREEN = "#009000";
+var COLOR_WHITE = "#ffffff";
 
 //init
 $("#seed").keyup(function() {
