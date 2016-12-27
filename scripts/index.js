@@ -236,13 +236,5 @@ function shuffle(array) {
 	return array;
 }
 
-//enable pressing 'Enter' on seed field
-document.getElementById('seed').onkeypress = function(e) {
-	if (!e) e = window.event;
-	var keyCode = e.keyCode || e.which;
-	if (keyCode == '13') {
-		// Enter pressed
-		fire();
-		return false;
-	}
+
 }
