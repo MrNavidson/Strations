@@ -65,6 +65,36 @@ function fire() {
 	createNewGame();
 }
 
+// Trying to get the new word bank to work
+
+function fire() {
+	//get seed and set the seed for randomizer
+	var seed = document.getElementById("seed").value + 1;
+	Math.seedrandom(seed.toLowerCase());
+
+	var option = $('#gameMode :selected').val();
+	switch (option) {
+		case '2knouns':
+			sessionData = data.slice(0);
+			break;
+		case 'movies':
+			sessionData = movieData.slice(0);
+			break;
+		case 'custom':
+			if (customData.length === 0) {
+				var customWordList = prompt("Please enter custom word list. The list will be saved until your refresh your browser. (The words MUST be delimanted by spaces). eg: cat dog mouse", "Enter words here");
+				customData = customWordList.split(' ');
+			}
+			sessionData = customData.slice(0);
+			break;
+		default:
+			sessionData = defaultData.slice(0);
+	}
+
+}
+
+/////
+
 //not used, but probably useful at some point
 function removeItem(array, index) {
 	if (index > -1) {
