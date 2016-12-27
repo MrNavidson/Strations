@@ -72,7 +72,7 @@ function NewWords() {
 //	document.getElementById("seed").value = "";
 //	document.getElementById("seed").value = 222222;	
 //	document.getElementById("seed").focus();
-	document.getElementById("seed").innerHTML = "222222";
+	document.getElementById("seed").innerHTML = "11552";
 
 }
 
