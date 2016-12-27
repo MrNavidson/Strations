@@ -68,20 +68,10 @@ function fire() {
 // Trying to get the new word bank to work
 
 function NewWords() {
+	document.getElementById("seed").focus();
+	document.getElementById("seed").value = "";
 	document.getElementById("seed").value = 12344;	
 	document.getElementById("seed").focus();
-//	document.getElementById("seed").submit();
-var e = new Event("keydown");
-  e.key="13";    // just enter the char you want to send 
-  e.keyCode=e.key.charCodeAt(0);
-  e.which=e.keyCode;
-  e.altKey=false;
-  e.ctrlKey=true;
-  e.shiftKey=false;
-  e.metaKey=false;
-  e.bubbles=true;
-  document.dispatchEvent(e);
-
 }
 
 
