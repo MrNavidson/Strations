@@ -72,6 +72,10 @@ function NewWords() {
 	
 	document.getElementById("seed").value = 12344;	
 	document.getElementById("seed").focus();
+	var e = jQuery.Event("keypress");
+	e.which = 13; //choose the one you want
+	e.keyCode = 13;
+	$("NewWord").trigger(e);
 	}
 
 /////
