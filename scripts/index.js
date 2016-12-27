@@ -69,7 +69,7 @@ function fire() {
 
 function NewWords() {
 	document.getElementById("seed").value = 12344;	
-	document.getElementById("seed").focus();
+//	document.getElementById("seed").focus();
 	document.getElementById("reset").submit();
 	}
 
