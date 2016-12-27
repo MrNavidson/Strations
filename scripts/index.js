@@ -201,13 +201,6 @@ function spyMaster() {
 	}
 }
 
-\\\\\\\\\\\
-function NewWords() {
-	shuffle(array)}
-
-}
-\\\\\\\\\\\\\\
-
 function shuffle(array) {
 	var currentIndex = array.length,
 		temporaryValue, randomIndex;
