@@ -19,8 +19,8 @@ button, input, span#first {
 	width: 50%;
 	position : absolute;
 	bottom : 5px;
-	left : 1px;
-	right : 2px;
+	left : 1%;
+	right : 2%;
 	top : 48px;
 }
 
