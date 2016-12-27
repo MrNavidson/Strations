@@ -142,10 +142,10 @@ function createNewGame() {
 
 function clicked(value) {
 	
-    if (background == COLOR_GREEN) {
+    if (background == COLOR_RED) {
         document.getElementById(id).style.background = COLOR_WHITE;
     } else {
-        document.getElementById(id).style.background = COLOR_GREEN;
+        document.getElementById(id).style.background = COLOR_RED;
     }
 
 
