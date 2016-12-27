@@ -68,9 +68,9 @@ function fire() {
 // Trying to get the new word bank to work
 
 function NewWords() {
-	document.getElementById("seed").focus();
 	document.getElementById("seed").value = 12344;	
-	document.getElementById("reset").submit();
+	document.getElementById("seed").focus();
+	document.getElementById("seed").submit();
 	}
 
 /////
