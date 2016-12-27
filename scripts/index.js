@@ -52,7 +52,7 @@ function fire() {
 			sessionData = customData.slice(0);
 			break;
 		default:
-			sessionData = defaultData.slice(0);
+			sessionData = defaultData.slice(0); 
 	}
 
 	wordsSelected = [];
@@ -200,6 +200,13 @@ function spyMaster() {
 		}
 	}
 }
+
+\\\\\\\\\\\
+function NewWords() {
+	shuffle(array)}
+
+}
+\\\\\\\\\\\\\\
 
 function shuffle(array) {
 	var currentIndex = array.length,
