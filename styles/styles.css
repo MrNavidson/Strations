@@ -19,13 +19,13 @@ button, input, span#first {
 	width: 100%;
 	position : absolute;
 	bottom : 5px;
-	left : 2%;
-	right : 1%;
+	left : 50%;
+	right : -50%;
 	top : 48px;
 }
 
 #board div.row {
-	height : 5%;
+	height : 15%;
 }
 
 #board div.word {
