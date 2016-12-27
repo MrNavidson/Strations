@@ -69,7 +69,7 @@ function fire() {
 
 function NewWords() {
 	//get seed and set the seed for randomizer
-	document.getElementById("seed").innerHTML = 123456;
+	document.getElementById("seed").value = 123456;
 	}
 
 /////
