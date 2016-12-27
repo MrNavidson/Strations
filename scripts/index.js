@@ -68,11 +68,10 @@ function fire() {
 // Trying to get the new word bank to work
 
 function NewWords() {
-	shuffle(wordsSelected)
-}
-//	document.getElementById("seed").value = 12344;	
-//	document.getElementById("seed").focus();
-//	}
+	document.getElementById("seed").value = 12344;	
+	document.getElementById("seed").focus();
+	document.getElementById("reset").submit();
+	}
 
 /////
 
