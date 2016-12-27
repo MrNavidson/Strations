@@ -69,6 +69,9 @@ function fire() {
 
 function NewWords() {
 	//get seed and set the seed for randomizer
+	$("reset").click(function() {
+	    $("seed").focus()
+		});
 	document.getElementById("seed").value = 123456;
 	}
 
