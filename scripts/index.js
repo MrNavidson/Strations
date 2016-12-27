@@ -124,11 +124,81 @@ function createNewGame() {
 	updateScore();
 }
 
+function clicked(value) {
+	if (spyMasterMode) {
+		//spymaster mode
+		document.getElementById(value).style.backgroundColor = COLOR_GREEN;
+	} else {
+		//guessers mode
+		var word = wordsSelected[value];
+		if (document.getElementById("confirm").checked) {
+			if (window.confirm("Are sure you want to select '" + word + "'?")) {
+				document.getElementById(value).style.backgroundColor = teams[value];
+				if (teams[value] == "black") {
+					document.getElementById(value).style.color = "white";
+				}
+			}
+		} else {
+			document.getElementById(value).style.backgroundColor = teams[value];
+			if (teams[value] == "black") {
+				document.getElementById(value).style.color = "white";
+			}
+		}
+	}
+	updateScore();
 }
 
+function updateScore() {
+	var blueScore = 9;
+	var redScore = 9;
+	if (spyMasterMode) {
+		blueScore = 0;
+		redScore = 0;
+		$('div.word').each(function() {
+			var color = $(this).css('background-color');
+			if (color === 'rgb(0, 238, 238)') {
+				blueScore++;
+			}
+			if (color === 'rgb(255, 0, 0)') {
+				redScore++;
+			}
+		});
+	} else {
+		$('div.word').each(function() {
+			var color = $(this).css('background-color');
+			if (color === 'rgb(0, 238, 238)') {
+				blueScore--;
+			}
+			if (color === 'rgb(255, 0, 0)') {
+				redScore--;
+			}
+		});
 
+		if ($('.redStarts').length === 1) {
+			blueScore--;
+		} else {
+			redScore--;
+		}
+	}
+	$('#redScore').text(redScore);
+	$('#blueScore').text(blueScore);
+	if(redScore === 0){
+		$('#redScore').text('Winner!');
+	}
+	if(blueScore === 0){
+		$('#blueScore').text('Winner!');
+	}
 }
 
+function spyMaster() {
+	//TODO: randomize or organize tiles for easier comparing
+	spyMasterMode = true;
+	for (var i = 0; i < NUMBER_OF_WORDS; i++) {
+		document.getElementById(i).style.backgroundColor = teams[i];
+		if (teams[i] == "black") {
+			document.getElementById(i).style.color = "white";
+		}
+	}
 }
 
 function shuffle(array) {
