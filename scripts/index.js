@@ -68,11 +68,11 @@ function fire() {
 // Trying to get the new word bank to work
 
 function NewWords() {
-	//get seed and set the seed for randomizer
-	
-	document.getElementById("seed").value = 12344;	
-	document.getElementById("seed").focus();
-	}
+	shuffle(wordsSelected)
+}
+//	document.getElementById("seed").value = 12344;	
+//	document.getElementById("seed").focus();
+//	}
 
 /////
 
