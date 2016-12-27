@@ -67,7 +67,7 @@ function fire() {
 
 // Trying to get the new word bank to work
 
-function NewWord() {
+function NewWords() {
 	//get seed and set the seed for randomizer
 	var seed = document.getElementById("seed").value + 1;
 	Math.seedrandom(seed.toLowerCase());
