@@ -140,27 +140,8 @@ function createNewGame() {
 }
 
 function clicked(value) {
-	if (spyMasterMode) {
-		//spymaster mode
-		document.getElementById(value).style.backgroundColor = COLOR_GREEN;
-	} else {
-		//guessers mode
-		var word = wordsSelected[value];
-		if (document.getElementById("confirm").checked) {
-			if (window.confirm("Are sure you want to select '" + word + "'?")) {
-				document.getElementById(value).style.backgroundColor = teams[value];
-				if (teams[value] == "black") {
-					document.getElementById(value).style.color = "white";
-				}
-			}
-		} else {
-			document.getElementById(value).style.backgroundColor = teams[value];
-			if (teams[value] == "black") {
-				document.getElementById(value).style.color = "white";
-			}
-		}
-	}
-	updateScore();
+	
+	document.getElementById(value).style.backgroundColor = COLOR_GREEN;
 }
 
 function updateScore() {
