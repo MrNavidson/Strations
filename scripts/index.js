@@ -1,3 +1,4 @@
+KB
 /*
 Notes: 
 'data' is lazily imported from the html
@@ -17,7 +18,6 @@ var COLOR_YELLOW = "#ffff00";
 var COLOR_BLUE = "#00eeee";
 var COLOR_BLACK = "#808080";
 var COLOR_GREEN = "#009000";
-var COLOR_WHITE = "#ffffff";
 
 //init
 $("#seed").keyup(function() {
@@ -141,13 +141,66 @@ function createNewGame() {
 }
 
 function clicked(value) {
-	
-    if (background == COLOR_RED) {
-        document.getElementById(id).style.background = COLOR_WHITE;
-    } else {
-        document.getElementById(id).style.background = COLOR_RED;
-    }
+	if (document.getElementById(value).style.backgroundColor == COLOR_RED) {
+		document.getElementById(value).style.backgroundColor = COLOR_WHITE;
+	} else {
+		document.getElementById(value).style.backgroundColor = COLOR_RED;
+		}
+	updateScore();
+}
 
+function updateScore() {
+	var blueScore = 9;
+	var redScore = 9;
+	if (spyMasterMode) {
+		blueScore = 0;
+		redScore = 0;
+		$('div.word').each(function() {
+			var color = $(this).css('background-color');
+			if (color === 'rgb(0, 238, 238)') {
+				blueScore++;
+			}
+			if (color === 'rgb(255, 0, 0)') {
+				redScore++;
+			}
+		});
+	} else {
+		$('div.word').each(function() {
+			var color = $(this).css('background-color');
+			if (color === 'rgb(0, 238, 238)') {
+				blueScore--;
+			}
+			if (color === 'rgb(255, 0, 0)') {
+				redScore--;
+			}
+		});
+
+		if ($('.redStarts').length === 1) {
+			blueScore--;
+		} else {
+			redScore--;
+		}
+	}
+	$('#redScore').text(redScore);
+	$('#blueScore').text(blueScore);
+	if(redScore === 0){
+		$('#redScore').text('Winner!');
+	}
+	if(blueScore === 0){
+		$('#blueScore').text('Winner!');
+	}
+}
+
+function spyMaster() {
+	//TODO: randomize or organize tiles for easier comparing
+	spyMasterMode = true;
+	for (var i = 0; i < NUMBER_OF_WORDS; i++) {
+		document.getElementById(i).style.backgroundColor = teams[i];
+		if (teams[i] == "black") {
+			document.getElementById(i).style.color = "white";
+		}
+	}
+}
 
 function shuffle(array) {
 	var currentIndex = array.length,
