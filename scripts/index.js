@@ -68,16 +68,11 @@ function fire() {
 // Trying to get the new word bank to work
 
 function NewWords() {
-	shuffle(wordsSelected);
-}
+	//get seed and set the seed for randomizer
 	
-//	document.getElementById("seed").value = 12344;	
-//	document.getElementById("seed").focus();
-//	var e = jQuery.Event("keypress");
-//	e.which = 13; //choose the one you want
-//	e.keyCode = 13;
-//	$("NewWord").trigger(e);
-//	}
+	document.getElementById("seed").value = 12344;	
+	document.getElementById("seed").focus();
+	}
 
 /////
 
@@ -237,5 +232,13 @@ function shuffle(array) {
 	return array;
 }
 
-
+//enable pressing 'Enter' on seed field
+document.getElementById('seed').onkeypress = function(e) {
+	if (!e) e = window.event;
+	var keyCode = e.keyCode || e.which;
+	if (keyCode == '13') {
+		// Enter pressed
+		fire();
+		return false;
+	}
 }
