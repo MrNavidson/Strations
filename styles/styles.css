@@ -71,7 +71,7 @@ button, input, span#first {
 
 #header a {
 	font-size:20px;
-	margin-left: 5px;
+	margin-left: 25px;
 	margin-right: 8px;
 	font-weight: bold;
 }
@@ -84,7 +84,7 @@ button, input, span#first {
 }
 
 #seed {
-	margin-right: 5px;	
+	margin-right: 10px;	
 }
 
 #gameMode {
@@ -93,8 +93,8 @@ button, input, span#first {
 }
 
 #reset {
-	margin-left: 5px;
-	margin-right: 5px;	
+	margin-left: 25px;
+	margin-right: 25px;	
 }
 #google_translate_element {
 	margin-left: 5px;
