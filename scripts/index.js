@@ -76,7 +76,10 @@ function NewWords() {
 //	document.getElementById("seed").focus();
 //	document.getElementById("seed").innerHTML = "";
 //	Math.seedrandom(seed.toLowerCase());
-	window.location.reload();
+//	window.location.reload();
+document.getElementById("reset").onsubmit = function(){
+    location.reload(true);
+
 }
 
 
