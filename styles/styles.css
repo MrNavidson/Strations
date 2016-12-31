@@ -93,8 +93,9 @@ button, input, span#first {
 }
 
 #reset {
-	margin-left: 25px;
-	margin-right: 25px;	
+	margin-left: 15px;
+	margin-right: 25px;
+	font-weight: bold;
 }
 #google_translate_element {
 	margin-left: 5px;
