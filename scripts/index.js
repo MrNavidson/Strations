@@ -8,7 +8,7 @@ Notes:
 
 var wordsSelected = [];
 var teams = [];
-var NUMBER_OF_WORDS = 3;
+var NUMBER_OF_WORDS = 4;
 var spyMasterMode = false;
 var sessionData = [];
 var customData = [];
@@ -93,14 +93,14 @@ function removeItem(array, index) {
 function createNewGame() {
 	var trs = [];
 	for (var i = 0; i < NUMBER_OF_WORDS; i++) {
-		if (!trs[i % 3]) {
-			trs[i % 3] = "";
+		if (!trs[i % 2]) {
+			trs[i % 2] = "";
 		}
 		var randomNumber = Math.floor(Math.random() * sessionData.length);
 		var word = sessionData[randomNumber];
 		removeItem(sessionData, randomNumber);
 		wordsSelected.push(word);
-		trs[i % 3] += "<div class=\"word\" id=\'" + i + "\' onclick=\"clicked(\'" + i + "\')\"><div><a href=\"#\"><span class=\"ada\"></span>" + word + "</a></div></div>";
+		trs[i % 2] += "<div class=\"word\" id=\'" + i + "\' onclick=\"clicked(\'" + i + "\')\"><div><a href=\"#\"><span class=\"ada\"></span>" + word + "</a></div></div>";
 	}
 	//<a href="#"><span class="ada">Washington stimulates economic growth </span>Read me</a>
 	for (var i = 0; i < trs.length; i++) {
