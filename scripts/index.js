@@ -8,7 +8,7 @@ Notes:
 
 var wordsSelected = [];
 var teams = [];
-var NUMBER_OF_WORDS = 6;
+var NUMBER_OF_WORDS = 3;
 var spyMasterMode = false;
 var sessionData = [];
 var customData = [];
